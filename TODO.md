@@ -1,8 +1,10 @@
 # Ender 3 to-do
 
-- :white_large_square: recompile the FW and get latest Marlin FW: https://all3dp.com/2/ender-3-pro-firmware-update-marlin/
-- questions about FW: - why are there #error statements that crash the compile? I commented them out. (lines 23-24 of configurations.h) - Process: Why did I copy marlin and config to another directory in https://all3dp.com/2/ender-3-v2-firmware-update/ Step 2?
-  Compare the following:
+- <input type="checkbox"> recompile the FW and get latest Marlin FW: https://all3dp.com/2/ender-3-pro-firmware-update-marlin/
+- <input type="checkbox"> questions about FW:
+  - why are there #error statements that crash the compile? I commented them out. (lines 23-24 of configurations.h)
+  - Process: Why did I copy marlin and config to another directory in https://all3dp.com/2/ender-3-v2-firmware-update/ Step 2?
+- <input type="checkbox"> Compare the following:
   https://3dprintscape.com/marlin-firmware-on-creality-board-complete-guide/ vs https://all3dp.com/2/ender-3-v2-firmware-update/
   YouTube videos:
   https://www.youtube.com/watch?v=J9vxJT5Tgh4 /_ Teaching Tech _/
