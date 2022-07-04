@@ -5,28 +5,33 @@
   - why are there #error statements that crash the compile? I commented them out. (lines 23-24 of configurations.h)
   - Process: Why did I copy marlin and config to another directory in https://all3dp.com/2/ender-3-v2-firmware-update/ Step 2?
 - <input type="checkbox"> Compare the following:
-  https://3dprintscape.com/marlin-firmware-on-creality-board-complete-guide/ vs https://all3dp.com/2/ender-3-v2-firmware-update/
-  YouTube videos:
-  https://www.youtube.com/watch?v=J9vxJT5Tgh4 /_Teaching Tech_/
-  melzi @ 6:55 & 11:38 in configuration.h
-  further explanation in
-  - https://youtu.be/eq_ygvHF29I
-  - https://www.youtube.com/watch?v=pQ7WZST8sqk /_3Dprintscape_/ default env in platformio.ini @ 5:45
-    configuration changes start @ 8:00
-    https://www.youtube.com/watch?v=oZVTYpHnpIw /_ Thomas Sanladerer _/
-    Why was PIDTEMPBED already uncommented? (~line 730 of configurations.h)
-    What is the correct value of 'default_envs = mega2560' in the platformio.ini file?
-    Terminal says, "Error: Build environment 'mega2560' is incompatible with BOARD_CREALITY_V4. Use one of these: STM32F103RE_creality, STM32F103RE_creality_xfer, STM32F103RC_creality, STM32F103RC_creality_xfer, STM32F103RE_creality_maple"
-    Does vscode come with its own c compiler or do i need to install one?
-    Enabling EEPROM with https://github.com/jyers/marlin/releases/
-    [] Go through guides at https://teachingtechyt.github.io/
-    [] m500 and PIDTEMPBED don't work yet
-    [] New FW-https://www.th3dstudio.com/hc/downloads/unified-2-firmware/creality/creality-boards-creality/creality-ender-3-3-pro-ender-5-5-pro-firmware-v4-2-x-board/
-    Already downloaded and unzipped to C:\Program Files (x86)\Creality-Ender3Pro\FW update
-    [] PID BED TEMPERATURE control in Configuration.h
+  - Git
+    - https://3dprintscape.com/marlin-firmware-on-creality-board-complete-guide/
+    - https://all3dp.com/2/ender-3-v2-firmware-update/
+  - YouTube videos: - https://www.youtube.com/watch?v=J9vxJT5Tgh4 /_Teaching Tech_/
+    melzi @ 6:55 & 11:38 in configuration.h
 
-[] Update default Kp parameters:
+Further explanation in
 
+- https://youtu.be/eq_ygvHF29I
+- https://www.youtube.com/watch?v=pQ7WZST8sqk /_3Dprintscape_/ default env in platformio.ini @ 5:45
+  configuration changes start @ 8:00
+  https://www.youtube.com/watch?v=oZVTYpHnpIw /_Thomas Sanladerer_/
+- Why was PIDTEMPBED already uncommented? (~line 730 of configurations.h)
+  - What is the correct value of 'default_envs = mega2560' in the platformio.ini file?
+- Terminal says, "Error: Build environment 'mega2560' is incompatible with BOARD_CREALITY_V4. Use one of these: STM32F103RE_creality, STM32F103RE_creality_xfer, STM32F103RC_creality, STM32F103RC_creality_xfer, STM32F103RE_creality_maple"
+- <input type="checkbox" checked> Does vscode come with its own c compiler or do i need to install one?
+- <input type="checkbox"> Enabling EEPROM with https://github.com/jyers/marlin/releases/
+- <input type="checkbox"> Go through guides at https://teachingtechyt.github.io/
+- <input type="checkbox"> m500 and PIDTEMPBED don't work yet
+- <input type="checkbox"> New FW-https://www.th3dstudio.com/hc/downloads/unified-2-firmware/creality/creality-boards-creality/creality-ender-3-3-pro-ender-5-5-pro-firmware-v4-2-x-board/
+- Already downloaded and unzipped to C:\Program Files (x86)\Creality-Ender3Pro\FW update
+
+  - <input type="checkbox"> PID BED TEMPERATURE control in Configuration.h
+
+- Update default Kp parameters:
+
+```
 > > > M303 E-1 S65 U1
 > > > SENDING:M303 E-1 S65 U1
 > > > bias: 126 d: 126 min: 195.91 max: 204.44
@@ -44,7 +49,8 @@
 > > > #define DEFAULT_Kp 22.62
 > > > #define DEFAULT_Ki 1.82
 > > > #define DEFAULT_Kd 70.26
+```
 
-[] If I can recompile the FW, the above is possible. If not, see note at bottom of https://teachingtechyt.github.io/calibration.html#pid
+- <input type="checkbox"> If I can recompile the FW, the above is possible. If not, see note at bottom of https://teachingtechyt.github.io/calibration.html#pid
 
-[] Cura slicer default preamble change to support extruder and bed PIDs.
+- <input type="checkbox"> Cura slicer default preamble change to support extruder and bed PIDs.
